@@ -1,0 +1,19 @@
+.frontPageFeatures {
+  height: 110px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #468d9a 0%, rgba(70, 141, 154, 0.35) 100%);
+  &__images {
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    &__img {
+      object-fit: contain;
+      width: 120px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@import "variables";
+
+.landingText {
+  padding: 10px;
+  padding-bottom: 30px;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  font-weight: 550;
+  &__title {
+    font-size: 2.7rem;
+  }
+  &__desc {
+    font-size: 1.8rem;
+    margin: 70px 0;
+  }
+  &__button {
+    @include button(#417fa0);
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+}

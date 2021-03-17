@@ -1,0 +1,36 @@
+.footer {
+  padding: 100px;
+  max-width: 1800px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  &__socials {
+    display: flex;
+    img {
+      object-fit: contain;
+      width: 40px;
+      margin: 20px;
+    }
+  }
+  &__middle,
+  &__information {
+    margin: 20px;
+    strong {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+    font-size: 1.2rem;
+    div {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      a {
+        color: white;
+        text-decoration: none;
+        margin: 5px 0;
+      }
+    }
+  }
+}

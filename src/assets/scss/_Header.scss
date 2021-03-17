@@ -1,0 +1,30 @@
+@import "variables";
+
+.header {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+  &__logo {
+    display: flex;
+    flex: 1;
+    img {
+      object-fit: contain;
+      width: 250px;
+    }
+  }
+  &__group {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    &__item {
+      @include button(transparent);
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+      &:last-child {
+        background: #417fa0;
+      }
+    }
+  }
+}

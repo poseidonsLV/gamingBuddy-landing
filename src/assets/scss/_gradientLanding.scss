@@ -1,0 +1,81 @@
+.gradientLanding {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px;
+  color: white;
+  &__title {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 2.1rem;
+    text-align: center;
+  }
+  &__row {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    img {
+      object-fit: contain;
+      width: 50%;
+    }
+    &__right.social {
+      margin-left: 70px;
+    }
+    &__right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &__top {
+        font-size: 1.6rem;
+      }
+      &__bottom {
+        &__rule {
+          margin-top: 40px;
+          display: flex;
+          img {
+            margin-right: 40px;
+            object-fit: contain;
+            width: 30px;
+          }
+          p {
+            font-size: 1.8rem;
+            font-weight: 500;
+            width: 400px;
+          }
+        }
+      }
+    }
+    &__right.toxicity {
+      margin-right: 70px;
+    }
+  }
+  &__row.toxicity {
+    flex-direction: row-reverse;
+  }
+}
+.gradientLanding__title {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  max-width: 100%;
+}
+.gradientLanding__button {
+  text-align: center;
+  button {
+    @include button(#417fa0);
+    padding: 15px 20px;
+  }
+  p {
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    span {
+      text-decoration: underline;
+      cursor: pointer;
+      color: rgb(230, 230, 230);
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
