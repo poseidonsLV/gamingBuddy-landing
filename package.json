@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.10"
+  }
+}

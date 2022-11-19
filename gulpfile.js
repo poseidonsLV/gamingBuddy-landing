@@ -1,8 +1,8 @@
 const { src, dest, series, watch } = require("gulp");
-const sass = require("gulp-sass");
-const uglify = require("gulp-uglify");
-const concat = require("gulp-concat");
-const imagemin = require("gulp-imagemin");
+const sass = import("gulp-sass");
+const uglify = import("gulp-uglify");
+const concat = import("gulp-concat");
+const imagemin = import("gulp-imagemin");
 const browserSync = require("browser-sync").create();
 
 function copyHTML() {
@@ -35,15 +35,21 @@ function browsersyncServe() {
     server: { baseDir: "public" },
   });
 
-  watch("src/*.html").on("change", copyHTML);
-  watch("src/assets/scss/*.scss").on("change", styleTask);
-  watch("src/assets/js/*.js").on("change", jsTask);
+  const html = watch(['src/*.html']);
+  const styles = watch(['src/assets/scss/*.scss']);
+  const js = watch(['src/assets/js/*.js']);
+
+  html.on('change', function(path, stats) {
+    copyHTML();
+  });
+
+  styles.on('change', function(path, stats) {
+    styleTask();
+  });
+
+  js.on('change', function(path, stats) {
+    jsTask();
+  });
 }
 
-exports.default = series(
-  copyHTML,
-  imageTask,
-  styleTask,
-  jsTask,
-  browsersyncServe
-);
+exports.default = browsersyncServe
